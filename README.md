@@ -14,14 +14,14 @@
 mvn clean package
 ```
 
-产物位于 `target/cert_parser-v0.1.1.jar`。
+产物位于 `target/apple-cert-parser-1.0.0.jar`。
 
 # 四、用法
 
 ## 4.1 解析证书
 
 ```bash
-java -jar cert_parser-v0.1.0.jar certificate -f <证书.p12> [-p <密码>]
+java -jar apple-cert-parser-1.0.0.jar certificate -f <证书.p12> [-p <密码>]
 ```
 
 | 参数 | 必填 | 说明                |
@@ -47,7 +47,7 @@ java -jar cert_parser-v0.1.0.jar certificate -f <证书.p12> [-p <密码>]
 ## 4.2 解析描述文件
 
 ```bash
-java -jar cert_parser-v0.1.0.jar provision -f <描述文件.mobileprovision>
+java -jar apple-cert-parser-1.0.0.jar provision -f <描述文件.mobileprovision>
 ```
 
 | 参数 | 必填 | 说明                        |

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2023 ivfzhou
- * cert_parser is licensed under Mulan PSL v2.
+ * apple-cert-parser is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -10,8 +10,10 @@
  * See the Mulan PSL v2 for more details.
  */
 
-package cn.ivfzhou.cert_parser;
+package cn.ivfzhou.apple_cert_parser;
 
+import cn.ivfzhou.apple_cert_parser.cmd.Certificate;
+import cn.ivfzhou.apple_cert_parser.cmd.Provision;
 import jakarta.annotation.Resource;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -21,12 +23,9 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.IFactory;
 
-import cn.ivfzhou.cert_parser.cmd.Certificate;
-import cn.ivfzhou.cert_parser.cmd.Provision;
-
 @SpringBootApplication
 @Command(
-        name = "cert_parser",
+        name = "apple-cert-parser",
         mixinStandardHelpOptions = true,
         subcommands = {Certificate.class, Provision.class}
 )
@@ -35,7 +34,7 @@ public class CertParser implements ApplicationRunner {
     @Resource
     private IFactory factory;
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         SpringApplication.run(CertParser.class, args);
     }
 

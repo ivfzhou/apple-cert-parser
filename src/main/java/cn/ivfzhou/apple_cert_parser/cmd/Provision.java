@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2023 ivfzhou
- * cert_parser is licensed under Mulan PSL v2.
+ * apple-cert-parser is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -10,7 +10,14 @@
  * See the Mulan PSL v2 for more details.
  */
 
-package cn.ivfzhou.cert_parser.cmd;
+package cn.ivfzhou.apple_cert_parser.cmd;
+
+import cn.ivfzhou.apple_cert_parser.vo.ProvisionVo;
+import com.google.gson.Gson;
+import org.springframework.stereotype.Component;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Option;
+import xmlwise.Plist;
 
 import java.io.FileInputStream;
 import java.nio.charset.StandardCharsets;
@@ -18,14 +25,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
-
-import com.google.gson.Gson;
-import org.springframework.stereotype.Component;
-import picocli.CommandLine.Command;
-import picocli.CommandLine.Option;
-import xmlwise.Plist;
-
-import cn.ivfzhou.cert_parser.vo.ProvisionVo;
 
 @Component
 @Command(name = "provision")

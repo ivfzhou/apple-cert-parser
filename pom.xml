@@ -2,7 +2,7 @@
 
 <!--
 Copyright (c) 2023 ivfzhou
-cert_parser is licensed under Mulan PSL v2.
+apple-cert-parser is licensed under Mulan PSL v2.
 You can use this software according to the terms and conditions of the Mulan PSL v2.
 You may obtain a copy of Mulan PSL v2 at:
          http://license.coscl.org.cn/MulanPSL2
@@ -25,9 +25,9 @@ See the Mulan PSL v2 for more details.
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.ivfzhou</groupId>
-    <artifactId>cert_parser</artifactId>
-    <name>cert_parser</name>
-    <version>0.2.0</version>
+    <artifactId>apple-cert-parser</artifactId>
+    <name>apple-cert-parser</name>
+    <version>1.0.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

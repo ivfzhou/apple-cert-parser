@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2023 ivfzhou
- * cert_parser is licensed under Mulan PSL v2.
+ * apple-cert-parser is licensed under Mulan PSL v2.
  * You can use this software according to the terms and conditions of the Mulan PSL v2.
  * You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
@@ -34,11 +34,11 @@ module cn.ivfzhou.cert.parser {
     requires static lombok;
 
     // Spring 组件扫描与依赖注入需要反射访问。
-    opens cn.ivfzhou.cert_parser to spring.core, spring.beans, spring.context;
+    opens cn.ivfzhou.apple_cert_parser to spring.core, spring.beans, spring.context;
 
     // picocli 需要反射访问 @Command/@Option 字段，Spring 需要实例化 @Component。
-    opens cn.ivfzhou.cert_parser.cmd to spring.core, spring.beans, spring.context, info.picocli;
+    opens cn.ivfzhou.apple_cert_parser.cmd to spring.core, spring.beans, spring.context, info.picocli;
 
     // Gson 序列化 VO 需要反射访问字段。
-    opens cn.ivfzhou.cert_parser.vo to com.google.gson;
+    opens cn.ivfzhou.apple_cert_parser.vo to com.google.gson;
 }
